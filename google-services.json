@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "46970296705",
+    "firebase_url": "https://tilsit-e9e75.firebaseio.com",
+    "project_id": "tilsit-e9e75",
+    "storage_bucket": "tilsit-e9e75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46970296705:android:fbdd23038c6432afe07080",
+        "android_client_info": {
+          "package_name": "com.example.recycler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46970296705-b71i6c3budu8aiv7i4npdm0lb6g8tvpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8IrBQsEDmS2EXUn8_4Zu_pbDoJbQyi_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46970296705-b71i6c3budu8aiv7i4npdm0lb6g8tvpp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46970296705:android:70aa4ecebd685685e07080",
+        "android_client_info": {
+          "package_name": "com.example.tilsit9"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46970296705-b71i6c3budu8aiv7i4npdm0lb6g8tvpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8IrBQsEDmS2EXUn8_4Zu_pbDoJbQyi_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46970296705-b71i6c3budu8aiv7i4npdm0lb6g8tvpp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
