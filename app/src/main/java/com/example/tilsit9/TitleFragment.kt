@@ -40,6 +40,16 @@ class TitleFragment : Fragment() {
         })
 
     }
+    companion object {
+        fun newInstance(academy: String): TitleFragment {
+            val args = Bundle()
+            args.putString("android", academy)
+            val fragment = TitleFragment()
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
 
 
 }
