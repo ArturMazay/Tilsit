@@ -20,21 +20,19 @@ class TitleViewModel : ViewModel() {
                 val listData = mutableListOf<Model>()
                 for (document in result) {
                     val mImage: String = document.getString("image") ?: ""
-                    Log.e("XXX",mImage)
+
                     val mTitle: String = document.getString("title") ?: ""
                     val mDescription: String = document.getString("description") ?: ""
-
+                    val mVideo: String = document.getString("video") ?: ""
+                    Log.e("XXX",mVideo)
                     val model = Model(
                         mTitle,
                         mDescription,
-                        mImage
+                        mImage,
                     )
                     listData.add(model)
                 }
                 model.value = listData
             }
     }
-
-
-
 }

@@ -25,7 +25,7 @@ class TitleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val listImage: RecyclerView? = view.findViewById(R.id.image_list)
+        val listImage: RecyclerView? = view.findViewById(R.id.recyclerView)
         val myAdapter = MyAdapter()
         listImage?.adapter = myAdapter
 

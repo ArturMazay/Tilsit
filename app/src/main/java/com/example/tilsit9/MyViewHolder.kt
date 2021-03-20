@@ -17,6 +17,7 @@ class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         Glide.with(imageTitle.context).load(model.image).into(imageTitle)
         imageTitle.setImageResource(R.drawable.tilsit)
+
        /* imageName.text = model.title
         imageDescription.text = model.description*/
     }

@@ -4,13 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter() : RecyclerView.Adapter<MyViewHolder>() {
+class MyAdapter(var data: MutableList<Model> = mutableListOf()) : RecyclerView.Adapter<MyViewHolder>() {
 
-    var data = mutableListOf<Model>()
-        set(value) {
-            field = value
-
-        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder =
         MyViewHolder(itemView = LayoutInflater.from(parent.context)
