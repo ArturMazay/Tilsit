@@ -9,9 +9,6 @@ import android.view.ViewGroup
 
 class DescriptionFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = DescriptionFragment()
-    }
 
     private lateinit var viewModel: DescriptionViewModel
 
@@ -22,10 +19,11 @@ class DescriptionFragment : Fragment() {
         return inflater.inflate(R.layout.description_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(DescriptionViewModel::class.java)
-        // TODO: Use the ViewModel
+
+       // val model = requireArguments().getSerializable(MODEL_KEY) as Model
     }
 
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
 class TitleFragment : Fragment() {
@@ -26,7 +27,7 @@ class TitleFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val listImage: RecyclerView? = view.findViewById(R.id.recyclerView)
-        val myAdapter = MyAdapter()
+        val myAdapter = MyAdapter(onClickTitleCard)
         listImage?.adapter = myAdapter
 
 
@@ -34,22 +35,21 @@ class TitleFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(TitleViewModel::class.java)
         viewModel.model.observe(viewLifecycleOwner, Observer {
             it?.let {
-                myAdapter.data = it
+                myAdapter.submitList(it)
                 myAdapter.notifyDataSetChanged()
             }
         })
-
     }
-    companion object {
-        fun newInstance(academy: String): TitleFragment {
+
+    private val onClickTitleCard = object : OnClickTitleCard {
+        override fun onClick(model: Model) {
             val args = Bundle()
-            args.putString("android", academy)
-            val fragment = TitleFragment()
-            fragment.arguments = args
-            return fragment
+            args.putSerializable("MODEL_ARGS", model)
+            findNavController().navigate(R.id.action_titleFragment_to_descriptionFragment, args)
         }
     }
+}
 
-
-
+interface OnClickTitleCard {
+    fun onClick(model: Model)
 }

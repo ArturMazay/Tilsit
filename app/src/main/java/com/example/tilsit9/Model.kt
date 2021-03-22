@@ -1,7 +1,9 @@
 package com.example.tilsit9
 
- data class Model(
+import java.io.Serializable
+
+data class Model(
     val title: String?,
     val description: String?,
     val image: String?,
-)
+):Serializable
