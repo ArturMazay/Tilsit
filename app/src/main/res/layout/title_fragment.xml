@@ -60,6 +60,7 @@
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="4"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        tools:ignore="RtlHardcoded" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
