@@ -41,7 +41,7 @@ class TitleFragment : Fragment() {
     private val onClickTitleCard = object : OnClickTitleCard {
         override fun onClick(model: Model) {
             val action =
-                TitleFragmentDirections.actionTitleFragmentToDescriptionFragment(model.image.toString())
+                TitleFragmentDirections.actionTitleFragmentToDescriptionFragment(model.image.toString(),model.description.toString())
             Navigation.findNavController(view!!).navigate(action)
 
         }

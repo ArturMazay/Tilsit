@@ -25,5 +25,8 @@
         <argument
             android:name="MODEL_ARGS"
             app:argType="string" />
+        <argument
+            android:name="Description_ARGS"
+            app:argType="string" />
     </fragment>
 </navigation>

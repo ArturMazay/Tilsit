@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
@@ -27,8 +28,11 @@ class DescriptionFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(DescriptionViewModel::class.java)
 
         val imView: ImageView = view.findViewById(R.id.imageView)
+        val tvDescription: TextView = view.findViewById(R.id.tv_description)
+
         val imageTitle = args.MODELARGS
         imView.load(imageTitle)
+        tvDescription.text=args.DescriptionARGS
 
     }
 }
