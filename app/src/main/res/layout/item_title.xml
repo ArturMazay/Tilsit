@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginBottom="40dp"
-            android:text="Tilsit"
+            android:text="@string/tilsit"
             android:textColor="@android:color/white"
             android:textSize="28sp"
             android:textStyle="bold"
