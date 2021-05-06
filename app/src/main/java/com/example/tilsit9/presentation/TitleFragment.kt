@@ -7,17 +7,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tilsit9.R
-import com.example.tilsit9.domain.GetDataImp
 import com.example.tilsit9.domain.Model
-import com.example.tilsit9.firebase.RepositoryFirebase
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TitleFragment : Fragment() {
 
-    private lateinit var viewModel: TitleViewModel
+    private val myViewModel: TitleViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,11 +32,7 @@ class TitleFragment : Fragment() {
         val myAdapter = MyAdapter(onClickTitleCard)
         listImage?.adapter = myAdapter
 
-        viewModel = ViewModelProvider(this, TitleVMFactory(GetDataImp(RepositoryFirebase()))).get(
-            TitleViewModel::class.java
-        )
-
-        viewModel.loadDataList.observe(viewLifecycleOwner, Observer {
+        myViewModel.loadDataList.observe(viewLifecycleOwner, Observer {
 
             when (it) {
 
