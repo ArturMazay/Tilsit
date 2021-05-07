@@ -11,8 +11,8 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val domain = module {
-    single<IGetData> { GetDataImp(get()) }
-    viewModel { TitleViewModel(get()) }
+    single<IGetData> { GetDataImp(get(RepositoryFirebase::class)) }
+    viewModel { TitleViewModel(get(IGetData::class)) }
 }
 
 val data = module {
