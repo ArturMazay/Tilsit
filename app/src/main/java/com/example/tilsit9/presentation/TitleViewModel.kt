@@ -22,7 +22,6 @@ class TitleViewModel(private val useCase: IGetData) : ViewModel() {
 }
 
 class TitleVMFactory(private val useCase: IGetData) : ViewModelProvider.Factory {
-
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(IGetData::class.java).newInstance(useCase)
     }

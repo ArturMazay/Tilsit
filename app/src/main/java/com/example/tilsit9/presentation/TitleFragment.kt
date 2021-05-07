@@ -32,9 +32,9 @@ class TitleFragment : Fragment() {
         val myAdapter = MyAdapter(onClickTitleCard)
         listImage?.adapter = myAdapter
 
-        myViewModel.loadDataList.observe(viewLifecycleOwner, Observer {
+        myViewModel.loadDataList.observe(viewLifecycleOwner, Observer { dataSource ->
 
-            when (it) {
+            when (dataSource) {
 
                 is Status.Loading -> {
                     Toast.makeText(
@@ -45,8 +45,8 @@ class TitleFragment : Fragment() {
                         .show()
                 }
                 is Status.Success -> {
-                    it.let {
-                        myAdapter.submitList(it.data)
+                    dataSource.let { list ->
+                        myAdapter.submitList(list.data)
                         myAdapter.notifyDataSetChanged()
 
                     }
@@ -54,7 +54,7 @@ class TitleFragment : Fragment() {
                 is Status.Failure -> {
                     Toast.makeText(
                         requireContext(),
-                        "error:${it.throwable.message}",
+                        "error:${dataSource.throwable.message}",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
