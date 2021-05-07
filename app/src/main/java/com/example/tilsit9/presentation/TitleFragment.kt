@@ -54,7 +54,7 @@ class TitleFragment : Fragment() {
                 is Status.Failure -> {
                     Toast.makeText(
                         requireContext(),
-                        "error:${dataSource.throwable.message}",
+                        "error:${dataSource}",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
