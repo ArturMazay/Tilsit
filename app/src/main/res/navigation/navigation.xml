@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/titleFragment"
-        android:name="com.example.tilsit9.TitleFragment"
+        android:name="com.example.tilsit9.presentation.TitleFragment"
         android:label="title_fragment"
         tools:layout="@layout/title_fragment" >
         <action
@@ -16,11 +16,20 @@
     </fragment>
     <fragment
         android:id="@+id/descriptionFragment"
-        android:name="com.example.tilsit9.DescriptionFragment"
+        android:name="com.example.tilsit9.presentation.DescriptionFragment"
         android:label="description_fragment"
         tools:layout="@layout/description_fragment" >
         <action
             android:id="@+id/action_descriptionFragment_to_titleFragment"
             app:destination="@id/titleFragment" />
+        <argument
+            android:name="MODEL_ARGS"
+            app:argType="string" />
+        <argument
+            android:name="Description_ARGS"
+            app:argType="string" />
+        <argument
+            android:name="TITLE_ARGS"
+            app:argType="string" />
     </fragment>
 </navigation>
